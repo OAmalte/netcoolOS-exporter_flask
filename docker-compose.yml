@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+        objectserver_exporter:
+                image: objectserver_exporter:v6.0.2
+                container_name: objectserver_exporter
+                hostname: objectserver_exporter
+                volumes:
+                        - ./log:/log
+                ports:
+                        - "9898:9898"
